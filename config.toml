@@ -1,4 +1,4 @@
-baseURL = "http://impact-scholar.community"
+baseURL = "https://impact-scholar.community"
 theme = "hugo-apero"
 languageCode = "en"
 title = "HSG Impact Scholar Community"
