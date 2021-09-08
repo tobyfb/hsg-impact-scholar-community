@@ -12,7 +12,7 @@ layout: single
 links:
 location: St.Gallen, Switzerland
 show_post_time: false
-subtitle: Initial in-person meeting of the HSG Impact Scholar Community
+subtitle: Initial in-person meeting of the HSG Impact Scholar Community. We talked about the nature of impact, expectations and potential contributions of the community, as well as organization and agenda.
 title: Community Kick-off
 ---
 
