@@ -137,7 +137,12 @@ enableEmoji = true
     name = "Contact"
     title = "Get in touch"
     url = "/contact/"
-    weight = 5  
+    weight = 5
+  [[menu.header]]
+    name = "Newsletter"
+    title = "Sign up for our newsletter"
+    url = "/newsletter/"
+    weight = 6  
   #[[menu.header]]
   #  name = "A collection"
   #  title = "A collection"
