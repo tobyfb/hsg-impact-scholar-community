@@ -3,7 +3,7 @@ description: Sign up for the newsletter of the HSG Impact Scholar Community
 draft: false
 layout: standard
 show_title_as_headline: false
-title: NEWSLETTER
+title: Newsletter
 ---
 
 # Newsletter
