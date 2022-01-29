@@ -140,7 +140,7 @@ enableEmoji = true
     weight = 5
   [[menu.header]]
     name = "Newsletter"
-    title = "Sign up for our newsletter"
+    title = "Newsletter"
     url = "/newsletter/"
     weight = 6  
   #[[menu.header]]

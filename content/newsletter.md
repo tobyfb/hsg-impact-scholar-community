@@ -8,10 +8,7 @@ title: Newsletter
 
 # Newsletter
 
-
-## Sign up
-
-You can sign up for our newsletter [here](https://seu2.cleverreach.com/f/274634-316308/).
+We try to send out a newsletter once a month.
 
 ## Share news
 
