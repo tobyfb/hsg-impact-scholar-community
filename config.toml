@@ -128,11 +128,11 @@ enableEmoji = true
   #  title = "Project Portfolio"
   #  url = "/project/"
   #  weight = 3
-  [[menu.header]]
-    name = "Events"
-    title = "Events"
-    url = "/event/"
-    weight = 2
+  #[[menu.header]]
+  #  name = "Events"
+  #  title = "Events"
+  #  url = "/event/"
+  #  weight = 2
   [[menu.header]]
     name = "Contact"
     title = "Get in touch"

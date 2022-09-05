@@ -1,20 +1,15 @@
 ---
-author: Tobias Fehr-Bosshard
+author: HSG Impact Scholar Community
 categories:
+- Events
 date: "2021-07-06"
-date_end: "2021-07-06"
 draft: false
-event: Kick-off
-event_url: 
-excerpt: In-person kick-off of the HSG Impact Scholar Community
-featured: true
+excerpt: Our first event!
 layout: single
-links:
-location: St.Gallen, Switzerland
-show_post_time: false
-subtitle: Initial in-person meeting of the HSG Impact Scholar Community. We talked about the nature of impact, expectations and potential contributions of the community, as well as organization and agenda.
+subtitle: 
 title: Community Kick-off
 ---
+
 
 ![kick-off](/img/2021/2021-07-06_kick-off.jpg)
 
