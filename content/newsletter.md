@@ -8,7 +8,7 @@ title: Newsletter
 
 # Newsletter
 
-We try to send out a newsletter once a month. If you would like to receive the newsletter, please send an email to impact-scholar-community(AT)unisg.ch.
+We are trying to send out a newsletter once a month. If you would like to receive the newsletter, please send an email to impact-scholar-community(AT)unisg.ch.
 
 ## Share news
 
