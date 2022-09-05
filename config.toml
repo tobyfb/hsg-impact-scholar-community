@@ -134,15 +134,15 @@ enableEmoji = true
   #  url = "/event/"
   #  weight = 2
   [[menu.header]]
-    name = "Contact"
+    name = "Contact & Newsletter"
     title = "Get in touch"
-    url = "/contact/"
+    url = "/contact-newsletter/"
     weight = 5
-  [[menu.header]]
-    name = "Newsletter"
-    title = "Newsletter"
-    url = "/newsletter/"
-    weight = 6  
+  #[[menu.header]]
+  #  name = "Newsletter"
+  #  title = "Newsletter"
+  #  url = "/newsletter/"
+  #  weight = 6  
   #[[menu.header]]
   #  name = "A collection"
   #  title = "A collection"
