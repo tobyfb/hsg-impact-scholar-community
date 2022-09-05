@@ -11,7 +11,7 @@ Please get in touch if you are interested in the HSG Impact Scholar Community.
 
 You can find us on [LinkedIn](https://www.linkedin.com/groups/9079003/) or reach out at impact-scholar-community(AT)unisg.ch. 
 
-Our [digital communication and collaboration infrastructure](/blog/digital-collaboration-infrastructure) is emergent. 😊
+Our [digital communication and collaboration infrastructure](/blog/2021-07-21_digital-collaboration-infrastructure) is emergent. 😊
 </div>
 
 # Newsletter 💌
