@@ -20,4 +20,4 @@ We are trying to send out a newsletter once a month. If you would like to receiv
 
 # Share news 🚀
 <div class="pv3 f4 measure lh-copy dib">
-We are more than happy to share your news items related to the HSG Impact Scholar Community. Please add news items to be sent out with the next newsletter [here](https://airtable.com/shryGm4MVH8V3JFHu) or reach out by email.</div>
+We are more than happy to share your news items related to the HSG Impact Scholar Community. Please just send us an email impact-scholar-community(AT)unisg.ch</div>
