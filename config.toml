@@ -85,10 +85,10 @@ enableEmoji = true
   # Icon pack "fab" includes brand icons, see: https://fontawesome.com/icons?d=gallery&s=brands&m=free
   # Icon pack "fas" includes solid icons, see: https://fontawesome.com/icons?d=gallery&s=solid&m=free
   # Icon pack "far" includes regular icons, see: https://fontawesome.com/icons?d=gallery&s=regular&m=free
-  [[params.social]]
-      icon      = "discourse" # icon name without the 'fa-'
-      icon_pack = "fab"
-      url       = "https://www.social-innovation.community/c/hsg-impact-scholar-community/6"
+  #[[params.social]]
+  #    icon      = "discourse" # icon name without the 'fa-'
+  #    icon_pack = "fab"
+  #    url       = "https://www.social-innovation.community/c/hsg-impact-scholar-community/6"
   [[params.social]]
       icon      = "linkedin" # icon name without the 'fa-'
       icon_pack = "fab"
@@ -97,10 +97,10 @@ enableEmoji = true
       icon      = "sticky-note" # icon name without the 'fa-'
       icon_pack = "far"
       url       = "https://miro.com/app/board/o9J_l7CqNSE=/"
-  [[params.social]]
-      icon      = "twitter" # icon name without the 'fa-'
-      icon_pack = "fab"
-      url       = "https://twitter.com/hashtag/HSGImpactScholarCommunity"
+  #[[params.social]]
+  #    icon      = "twitter" # icon name without the 'fa-'
+  #    icon_pack = "fab"
+  #    url       = "https://twitter.com/hashtag/HSGImpactScholarCommunity"
   [[params.social]]
       icon      = "rss" # icon name without the 'fa-'
       icon_pack = "fas"
@@ -113,16 +113,16 @@ enableEmoji = true
 
 [menu]
   # Configure header 
-  [[menu.header]]
-    name = "About"
-    title = "About the HSG Impact Scholar Community"
-    url = "/about/"
-    weight = 1
-  [[menu.header]]
-    name = "Blog"
-    title = "Blog"
-    url = "/blog/"
-    weight = 4
+  #[[menu.header]]
+  #  name = "About"
+  #  title = "About the HSG Impact Scholar Community"
+  #  url = "/about/"
+  #  weight = 1
+  #[[menu.header]]
+  #  name = "Blog"
+  #  title = "Blog"
+  #  url = "/blog/"
+  #  weight = 4
   #[[menu.header]]
   #  name = "Projects"
   #  title = "Project Portfolio"
