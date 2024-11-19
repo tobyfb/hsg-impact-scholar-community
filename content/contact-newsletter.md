@@ -7,7 +7,7 @@ title: Contact & Newsletter
 ---
 # Get in Touch! 🤗
 <div class="pv3 f4 measure lh-copy dib">
-Please get in touch if you are interested in the HSG Impact Scholar Community. 
+Please get in touch if YOU are interested in the HSG Impact Scholar Community. 
 
 You can find us on [LinkedIn](https://www.linkedin.com/groups/9079003/) or reach out at impact-scholar-community(AT)unisg.ch. 
 
