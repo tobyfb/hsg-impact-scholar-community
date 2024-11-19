@@ -16,7 +16,11 @@ The current main facilitators are Eugenia, Tabea, and Tobias. We are really happ
 
 # Newsletter 💌
 <div class="pv3 f4 measure lh-copy dib">
-We are trying to send out a newsletter once a month. If you would like to receive the newsletter, you can sign up 👉 [here](https://373d1566.sibforms.com/serve/MUIFAF2m356lgkW-hci3WzeT8DQKqN4PKYy9B9B4k0xxO1nvxzMaX4YiihEKBkgYnCzm_G8C7lml4JKUkUsgSfN82DxJ0Ktrz4xOxtmyNC1Ha70D55DYMS4fxyPDmdKF8xOYNV19waj5Nq2iSZnFb9zcbCQIK5pO3LxD55wX502GKozFRwit4iow8Sh5h2QsxDybnfcNUG6loquT) or by scanning the QR Code below.<br><br>![Newsletter QR Code](/img/signup-QR-code.png)</div>
+We are trying to send out a newsletter once a month. 
+
+If you would like to receive the newsletter, you can sign up [here](https://373d1566.sibforms.com/serve/MUIFAF2m356lgkW-hci3WzeT8DQKqN4PKYy9B9B4k0xxO1nvxzMaX4YiihEKBkgYnCzm_G8C7lml4JKUkUsgSfN82DxJ0Ktrz4xOxtmyNC1Ha70D55DYMS4fxyPDmdKF8xOYNV19waj5Nq2iSZnFb9zcbCQIK5pO3LxD55wX502GKozFRwit4iow8Sh5h2QsxDybnfcNUG6loquT) or by scanning the QR Code below.
+
+![Newsletter QR Code](/img/signup-QR-code.png)</div>
 
 # Share news 🚀
 <div class="pv3 f4 measure lh-copy dib">
