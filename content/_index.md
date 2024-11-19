@@ -2,7 +2,7 @@
 action_label: Get in touch &rarr;
 action_link: /contact-newsletter/
 action_type: text
-description: The HSG Impact Scholar Community connects scholars aiming to conduct research that positively contributes to the UN Sustainable Development Goals and fosters positive social and environmental change. </br></br><small>Both the concept and the name of our local community was inspired by the [Impact Scholar Community](https://www.impactscholarcommunity.com) (see our [initial call for collaboration](https://impact-scholar.community/blog/2021-05-06_initial-invitation/)) which was established in 2020 and is supported by the Academy of Management (AOM) and hosted by the Organization and the Natural Environment AOM division.</small> 
+description: The HSG Impact Scholar Community connects scholars aiming to conduct research that positively contributes to the UN Sustainable Development Goals and fosters positive social and environmental change. </br></br><small>Both the concept and the name of our local community was inspired by the [Impact Scholar Community](https://www.impactscholarcommunity.com) which was established in 2020 and is supported by the Academy of Management (AOM) and hosted by the Organization and the Natural Environment AOM division.</small> 
 image_left: true
 images:
 - img/logo-full-transparent.png
