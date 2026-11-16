@@ -1,5 +1,14 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
+# Build output and dependencies
+node_modules/
+dist/
+.astro/
+
+# Local, machine-specific
+CLAUDE.local.md
+.env
 .DS_Store
+._*
+
+# Editors
+.vscode/
+.idea/
