@@ -29,6 +29,11 @@ An event counts as upcoming until the end of its last day. The sign-up button sh
 the event is upcoming and `signup.deadline` has not passed. If there is no link yet, leave
 `signup.url` out and write a `signup.note` such as "Sign-up opens soon".
 
+Publish the flyer as an image (`flyer.image`). Add the PDF (`flyer.pdf`) only after reading
+all its pages: flyers often carry a personal email address, and the build check does not
+look inside PDFs. Sign-up links and QR codes on old flyers are harmless once the form is
+closed.
+
 ## Members
 
 `src/content/members/firstname-lastname.md`. Template: `docs/templates/member.md`.
