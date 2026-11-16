@@ -73,7 +73,7 @@ for early-career scholars. Please find the full article
 
 Check out our ***[website](/)*** and stay in touch via the
 ***[LinkedIn](https://www.linkedin.com/groups/9079003/)*** group,
-***[Discourse](https://www.social-innovation.community/c/hsg-impact-scholar-community/6)***,
+***Discourse***,
 or email. 👏
 
 If you want to be more involved in the community or have any questions, please feel free to

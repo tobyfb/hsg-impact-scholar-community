@@ -46,7 +46,7 @@ to us.**
 
 Check out our ***[website](/)*** and stay in touch via the
 ***[LinkedIn](https://www.linkedin.com/groups/9079003/)*** group,
-***[Discourse](https://www.social-innovation.community/c/hsg-impact-scholar-community/6)***,
+***Discourse***,
 or email. 👏
 
 We wish you a great evening and hope to get in touch with you soon!
