@@ -1,0 +1,21 @@
+---
+// One line in the list of past events.
+import type { CollectionEntry } from "astro:content";
+import { shortDate, isoDay } from "../lib/dates";
+
+interface Props {
+  event: CollectionEntry<"events">;
+  showAfter?: string; // YYYY-MM-DD: row stays hidden until this day has passed
+}
+const { event, showAfter } = Astro.props;
+const e = event.data;
+const details = [e.format, e.location, e.partners.length > 0 && `with ${e.partners.join(", ")}`].filter(Boolean).join(" · ");
+---
+
+<li class="event-row" hidden={Boolean(showAfter)} data-show-after={showAfter}>
+  <time class="event-row__date" datetime={isoDay(e.date)}>{shortDate(e.date)}</time>
+  <div>
+    <span class="event-row__title"><a href={`/events/${event.id}/`}>{e.title}</a></span>
+    {details && <p>{details}</p>}
+  </div>
+</li>

@@ -1,0 +1,63 @@
+---
+// Newsletter issue: /newsletter/<file name>/
+import Base from "../../layouts/Base.astro";
+import { render, getEntries } from "astro:content";
+import { getNewsletters } from "../../lib/content";
+import { longDate, isoDay } from "../../lib/dates";
+
+export async function getStaticPaths() {
+  const issues = await getNewsletters(); // newest first
+  return issues.map((issue, i) => ({
+    params: { id: issue.id },
+    props: { issue, newer: issues[i - 1], older: issues[i + 1] },
+  }));
+}
+
+const { issue, newer, older } = Astro.props;
+const n = issue.data;
+const { Content } = await render(issue);
+const events = (await getEntries(n.events)).filter(Boolean);
+---
+
+<Base title={n.title} description={n.summary} current="/newsletter/">
+  <div class="wrap page-head">
+    <p class="crumb"><a href="/newsletter/">Newsletter archive</a></p>
+    <p class="eyebrow">
+      {n.kind === "announcement" ? "Announcement" : "Newsletter"} ·
+      <time datetime={isoDay(n.date)}>{longDate(n.date)}</time>
+    </p>
+    <h1>{n.title}</h1>
+  </div>
+
+  <article class="wrap">
+    <div class="prose">
+      <Content />
+    </div>
+
+    {
+      events.length > 0 && (
+        <section class="section--tight" aria-labelledby="events">
+          <h2 id="events">Events in this issue</h2>
+          <ul class="link-list">
+            {events.map((event) => (
+              <li>
+                <a href={`/events/${event.id}/`}>{event.data.title}</a>
+                <span class="muted"> · {longDate(event.data.date)}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <p class="archive-note">
+      Sent by email on {longDate(n.date)}. Edited for the web archive: contact details, attachments and expired links have
+      been removed.
+    </p>
+
+    <nav class="pager" aria-label="Other issues">
+      <span>{older && <a href={`/newsletter/${older.id}/`}>← {older.data.title}</a>}</span>
+      <span>{newer && <a href={`/newsletter/${newer.id}/`}>{newer.data.title} →</a>}</span>
+    </nav>
+  </article>
+</Base>

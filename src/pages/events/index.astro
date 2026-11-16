@@ -1,0 +1,64 @@
+---
+import Base from "../../layouts/Base.astro";
+import EventCard from "../../components/EventCard.astro";
+import EventRow from "../../components/EventRow.astro";
+import { render } from "astro:content";
+import { getPage, getUpcomingEvents, getPastEvents } from "../../lib/content";
+import { year, lastDay } from "../../lib/dates";
+
+const page = await getPage("events");
+const { Content } = await render(page);
+const upcoming = await getUpcomingEvents();
+const past = await getPastEvents();
+
+const years = [...new Set(past.map((e) => year(e.data.date)))];
+const upcomingYears = [...new Set(upcoming.map((e) => year(e.data.date)))].filter((y) => !years.includes(y));
+---
+
+<Base title={page.data.title} description={page.data.description} current="/events/">
+  <div class="wrap page-head">
+    <h1>{page.data.title}</h1>
+    {page.data.lead && <p class="lead">{page.data.lead}</p>}
+  </div>
+
+  <section class="wrap section--tight" aria-labelledby="upcoming">
+    <h2 id="upcoming">Upcoming</h2>
+    <div id="upcoming-list">
+      {upcoming.map((event) => <EventCard event={event} />)}
+    </div>
+    <p data-show-if-empty="#upcoming-list" hidden={upcoming.length > 0}>
+      No event is scheduled right now. New dates are announced in the <a href="/newsletter/">newsletter</a>.
+    </p>
+  </section>
+
+  <section class="wrap section" aria-labelledby="past">
+    <h2 id="past">Past events</h2>
+    <div class="prose"><Content /></div>
+    {
+      // Years that so far only hold upcoming events: shown once those have taken place.
+      upcomingYears.map((y) => (
+        <div class="year-group" hidden data-show-after={upcoming.filter((e) => year(e.data.date) === y).map((e) => lastDay(e.data)).sort()[0]}>
+          <h3>{y}</h3>
+          <ul class="event-rows">
+            {upcoming.filter((e) => year(e.data.date) === y).reverse().map((event) => (
+              <EventRow event={event} showAfter={lastDay(event.data)} />
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+    {
+      years.map((y) => (
+        <div class="year-group">
+          <h3>{y}</h3>
+          <ul class="event-rows">
+            {upcoming.filter((e) => year(e.data.date) === y).reverse().map((event) => (
+              <EventRow event={event} showAfter={lastDay(event.data)} />
+            ))}
+            {past.filter((e) => year(e.data.date) === y).map((event) => <EventRow event={event} />)}
+          </ul>
+        </div>
+      ))
+    }
+  </section>
+</Base>

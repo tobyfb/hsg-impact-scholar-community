@@ -1,0 +1,10 @@
+# Old addresses of the 2021–2024 site. One rule per line: from, to, status.
+# If a published page ever has to move, add a line here so shared links keep working.
+/contact-newsletter/                                    /newsletter/                                        301
+/blog/                                                  /newsletter/                                        301
+/blog/index.xml                                         /newsletter/                                        301
+/blog/2022-08-04_newsletter_2022-08/                    /newsletter/2022-08-04-newsletter-august-2022/      301
+/blog/2022-09-05_newsletter_2022-09/                    /newsletter/2022-09-05-newsletter-september-2022/   301
+/blog/2021-07-06_kick-off/                              /events/2021-07-06-community-kick-off/              301
+/blog/2021-05-06_initial-invitation/                    /about/                                             301
+/blog/2021-07-21_digital-collaboration-infrastructure/  /about/                                             301

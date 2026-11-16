@@ -1,0 +1,73 @@
+---
+// Frame of every page: head (incl. link-preview tags), header, footer.
+import "@fontsource-variable/montserrat";
+import "@fontsource-variable/source-sans-3";
+import "@fontsource-variable/source-sans-3/wght-italic.css";
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { getSite } from "../lib/content";
+
+interface Props {
+  title?: string; // page title; the site name is appended
+  description?: string;
+  image?: string; // link-preview image, path under public/
+  current?: string; // active navigation entry, e.g. "/events/"
+  noindex?: boolean;
+}
+
+const site = await getSite();
+const { title, description = site.description, image = "/brand/share.png", current = "", noindex = false } = Astro.props;
+const fullTitle = title ? `${title} · ${site.name}` : site.name;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const imageUrl = new URL(image, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/brand/logo-round.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={title ?? site.name} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={imageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Header current={current} siteName={site.name} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer site={site} />
+    <!-- The site is rebuilt only when content changes. This keeps "upcoming" correct
+         in between: elements are hidden or shown once their date has passed. -->
+    <script is:inline>
+      (function () {
+        var today = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Zurich" }).format(new Date());
+        document.querySelectorAll("[data-hide-after]").forEach(function (el) {
+          if (el.getAttribute("data-hide-after") < today) el.hidden = true;
+        });
+        document.querySelectorAll("[data-show-after]").forEach(function (el) {
+          if (el.getAttribute("data-show-after") < today) el.hidden = false;
+        });
+        document.querySelectorAll("[data-show-if-empty]").forEach(function (el) {
+          var list = document.querySelector(el.getAttribute("data-show-if-empty"));
+          if (list && !list.querySelector(":scope > :not([hidden])")) {
+            el.hidden = false;
+            list.hidden = true;
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

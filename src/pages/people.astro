@@ -1,0 +1,93 @@
+---
+import Base from "../layouts/Base.astro";
+import { render } from "astro:content";
+import { getPage, getMembers } from "../lib/content";
+
+const page = await getPage("people");
+const { Content } = await render(page);
+const members = await getMembers();
+
+const groups = [
+  { id: "facilitators", title: "Facilitators", list: members.filter((m) => m.data.role === "facilitator" && m.data.status === "active") },
+  { id: "collaborators", title: "Collaborators", list: members.filter((m) => m.data.role === "collaborator" && m.data.status === "active") },
+  { id: "alumni", title: "Founders and former facilitators", list: members.filter((m) => m.data.status === "alumni") },
+].filter((group) => group.list.length > 0);
+
+const initials = (name: string) =>
+  name
+    .split(/\s+/)
+    .map((part) => part[0])
+    .filter((_, i, all) => i === 0 || i === all.length - 1)
+    .join("");
+
+const rendered = await Promise.all(
+  members.map(async (member) => [member.id, (await render(member)).Content] as const),
+);
+const bios = new Map(rendered);
+---
+
+<Base title={page.data.title} description={page.data.description} current="/people/">
+  <div class="wrap page-head">
+    <h1>{page.data.title}</h1>
+    {page.data.lead && <p class="lead">{page.data.lead}</p>}
+  </div>
+
+  {
+    groups.map((group) => (
+      <section class="wrap section--tight" aria-labelledby={group.id}>
+        <h2 id={group.id}>{group.title}</h2>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr))">
+          {group.list.map((member) => {
+            const m = member.data;
+            const Bio = bios.get(member.id)!;
+            const links = [
+              m.links.profile && { href: m.links.profile, label: "Profile" },
+              m.links.linkedin && { href: m.links.linkedin, label: "LinkedIn" },
+              m.links.website && { href: m.links.website, label: "Website" },
+            ].filter(Boolean) as { href: string; label: string }[];
+            return (
+              <article class="person" id={member.id}>
+                {m.photo ? (
+                  <img class="person__photo" src={m.photo} alt={`Portrait of ${m.name}`} width="104" height="104" loading="lazy" />
+                ) : (
+                  <div class="person__photo" aria-hidden="true">{initials(m.name)}</div>
+                )}
+                <div>
+                  <h3>{m.name}</h3>
+                  <p>
+                    {[m.roleNote, m.position].filter(Boolean).join(" · ")}
+                    {(m.roleNote || m.position) && <br />}
+                    {m.unitUrl ? <a href={m.unitUrl}>{m.unit}</a> : m.unit}
+                  </p>
+                  <Bio />
+                  <p class="person__label">Research interests</p>
+                  <ul class="chips">{m.researchInterests.map((item) => <li>{item}</li>)}</ul>
+                  {m.methods.length > 0 && (
+                    <>
+                      <p class="person__label">Methods</p>
+                      <ul class="chips chips--methods">{m.methods.map((item) => <li>{item}</li>)}</ul>
+                    </>
+                  )}
+                  {links.length > 0 && (
+                    <p style="margin-top: 0.9rem">
+                      {links.map((link, i) => (
+                        <>
+                          {i > 0 && " · "}
+                          <a href={link.href}>{link.label}</a>
+                        </>
+                      ))}
+                    </p>
+                  )}
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+    ))
+  }
+
+  <section class="wrap section--tight">
+    <div class="prose"><Content /></div>
+  </section>
+</Base>

@@ -1,0 +1,137 @@
+---
+import Base from "../layouts/Base.astro";
+import Network from "../components/Network.astro";
+import { getSite, getUpcomingEvents, getPastEvents, getNewsletters } from "../lib/content";
+import { dayNumber, monthShort, fullDate, timeRange, lastDay, isoDay } from "../lib/dates";
+
+const site = await getSite();
+const upcoming = await getUpcomingEvents();
+const past = await getPastEvents();
+const issues = await getNewsletters();
+const next = upcoming[0];
+const yearsActive = new Date().getFullYear() - site.foundedYear;
+// The numbers only say something once the archive is filled in.
+const showFacts = past.length >= 10;
+---
+
+<Base current="/">
+  <section class="wrap hero">
+    <img
+      class="hero__logo"
+      src="/brand/logo-full-transparent.png"
+      alt="The HSG Impact Scholar Community, University of St.Gallen"
+      width="1584"
+      height="396"
+    />
+    <h1>{site.claim}</h1>
+    <p class="lead">{site.description}</p>
+  </section>
+
+  {
+    next && (
+      <section class="wrap section--tight" data-hide-after={lastDay(next.data)}>
+        <div class="next-event">
+          <Network class="next-event__motif" />
+          <div class="date-tile" aria-hidden="true">
+            <span class="date-tile__day">{dayNumber(next.data.date)}</span>
+            <span class="date-tile__month">{monthShort(next.data.date)}</span>
+          </div>
+          <div>
+            <p class="eyebrow">Next event</p>
+            <h2>
+              <a href={`/events/${next.id}/`}>{next.data.title}</a>
+            </h2>
+            <p class="next-event__when">
+              <time datetime={isoDay(next.data.date)}>{fullDate(next.data.date)}</time>
+              {timeRange(next.data.startTime, next.data.endTime) && `, ${timeRange(next.data.startTime, next.data.endTime)}`}
+              {next.data.location && ` · ${next.data.location}`}
+            </p>
+            <p class="next-event__summary">{next.data.summary}</p>
+            <div class="btn-row">
+              {next.data.signup?.url && (
+                <a class="btn" href={next.data.signup.url}>
+                  {next.data.signup.label}
+                </a>
+              )}
+              <a class={next.data.signup?.url ? "btn btn--ghost" : "btn"} href={`/events/${next.id}/`}>
+                Event details
+              </a>
+              {!next.data.signup?.url && next.data.signup?.note && <span>{next.data.signup.note}</span>}
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="wrap section">
+    <div class="grid">
+      <article class="card card--entry">
+        <h3><a href="/events/">Events</a></h3>
+        <p>Workshops, research exchanges, methods sessions and get-togethers since {site.foundedYear}, with flyers and recaps.</p>
+        <p class="card__more"><a href="/events/">Upcoming and past events</a></p>
+      </article>
+      <article class="card card--entry">
+        <h3><a href="/people/">People</a></h3>
+        <p>The facilitators and collaborators behind the community, their research interests and methods.</p>
+        <p class="card__more"><a href="/people/">Meet the people</a></p>
+      </article>
+      <article class="card card--entry">
+        <h3><a href="/newsletter/">Newsletter</a></h3>
+        <p>News from the community and the HSG ecosystem, sent a few times per semester. Past issues are archived here.</p>
+        <p class="card__more"><a href="/newsletter/">Subscribe or browse the archive</a></p>
+      </article>
+    </div>
+  </section>
+
+  {
+    showFacts && (
+      <section class="wrap section--tight">
+        <dl class="facts">
+          <div>
+            <dt>{yearsActive}</dt>
+            <dd>years of community</dd>
+          </div>
+          <div>
+            <dt>{past.length}</dt>
+            <dd>events held</dd>
+          </div>
+          <div>
+            <dt>{issues.length}</dt>
+            <dd>newsletter issues archived</dd>
+          </div>
+        </dl>
+      </section>
+    )
+  }
+
+  {
+    site.callout && (
+      <section class="wrap section--tight">
+        <div class="band">
+          <div>
+            <h2>{site.callout.title}</h2>
+            <p>{site.callout.text}</p>
+          </div>
+          <p>
+            <a class="btn" href={site.callout.linkUrl}>
+              {site.callout.linkLabel}
+            </a>
+          </p>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="wrap section--tight">
+    <div class="band band--light">
+      <div>
+        <h2>Stay in the loop</h2>
+        <p>The newsletter brings invitations to community events and news from the HSG ecosystem.</p>
+      </div>
+      <p>
+        <a class="btn" href={site.newsletterSignupUrl}>Subscribe to the newsletter</a>
+      </p>
+    </div>
+  </section>
+</Base>

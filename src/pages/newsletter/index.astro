@@ -1,0 +1,56 @@
+---
+import Base from "../../layouts/Base.astro";
+import { render } from "astro:content";
+import { getPage, getSite, getNewsletters } from "../../lib/content";
+import { longDate, isoDay, year } from "../../lib/dates";
+
+const page = await getPage("newsletter");
+const { Content } = await render(page);
+const site = await getSite();
+const issues = await getNewsletters();
+const years = [...new Set(issues.map((issue) => year(issue.data.date)))];
+---
+
+<Base title={page.data.title} description={page.data.description} current="/newsletter/">
+  <div class="wrap page-head">
+    <h1>{page.data.title}</h1>
+    {page.data.lead && <p class="lead">{page.data.lead}</p>}
+  </div>
+
+  <section class="wrap section--tight">
+    <div class="band band--light">
+      <div>
+        <h2>Subscribe</h2>
+        <p>Invitations to community events and news from the HSG ecosystem, a few times per semester. You can unsubscribe at any time.</p>
+      </div>
+      <p>
+        <a class="btn" href={site.newsletterSignupUrl}>Subscribe to the newsletter</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="archive">
+    <h2 id="archive">Archive</h2>
+    <div class="prose"><Content /></div>
+    {
+      years.map((y) => (
+        <div class="year-group">
+          <h3>{y}</h3>
+          <ul class="issue-list">
+            {issues
+              .filter((issue) => year(issue.data.date) === y)
+              .map((issue) => (
+                <li class="issue">
+                  <time datetime={isoDay(issue.data.date)}>{longDate(issue.data.date)}</time>
+                  <h3>
+                    <a href={`/newsletter/${issue.id}/`}>{issue.data.title}</a>
+                  </h3>
+                  <p>{issue.data.summary}</p>
+                </li>
+              ))}
+          </ul>
+        </div>
+      ))
+    }
+  </section>
+</Base>

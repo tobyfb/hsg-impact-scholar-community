@@ -1,0 +1,187 @@
+---
+// Event page: /events/<file name>/
+import Base from "../../layouts/Base.astro";
+import { render } from "astro:content";
+import { getEvents, getNewsletters } from "../../lib/content";
+import { fullDate, dateRange, timeRange, lastDay, isoDay, isUpcoming, longDate, todayZurich } from "../../lib/dates";
+
+export async function getStaticPaths() {
+  return (await getEvents()).map((event) => ({ params: { id: event.id }, props: { event } }));
+}
+
+const { event } = Astro.props;
+const e = event.data;
+const { Content } = await render(event);
+
+const upcoming = isUpcoming(e);
+const day = e.endDate ? dateRange(e) : fullDate(e.date);
+const time = timeRange(e.startTime, e.endTime);
+const signupOpen = e.status === "scheduled" && e.signup?.url;
+// The signup button disappears after the deadline, or after the event if there is none.
+const signupUntil = e.signup?.deadline ? isoDay(e.signup.deadline) : lastDay(e);
+
+const mentionedIn = (await getNewsletters()).filter((n) => n.data.events.some((ref) => ref.id === event.id));
+const linkLabel = { linkedin: "LinkedIn", report: "Report", slides: "Slides", video: "Video", other: "" };
+---
+
+<Base title={e.title} description={e.summary} image={e.shareImage ?? e.flyer?.image} current="/events/">
+  <div class="wrap page-head">
+    <p class="crumb"><a href="/events/">Events</a></p>
+    <p class="eyebrow">
+      {e.status !== "scheduled" && <span class="tag tag--alert">{e.status}</span>}
+      <span data-hide-after={lastDay(e)} hidden={!upcoming}>Upcoming event</span>
+      <span data-show-after={lastDay(e)} hidden={upcoming}>Past event</span>
+    </p>
+    <h1>{e.title}</h1>
+    <p class="lead">{e.summary}</p>
+  </div>
+
+  <div class="wrap event-layout">
+    <div>
+      <div class="prose">
+        <Content />
+      </div>
+
+      {
+        e.photos.length > 0 && (
+          <section class="section--tight" aria-labelledby="photos">
+            <h2 id="photos">Photos</h2>
+            <div class="photo-grid">
+              {e.photos.map((photo) => (
+                <figure>
+                  <a href={photo.src}>
+                    <img src={photo.src} alt={photo.alt} loading="lazy" />
+                  </a>
+                  {photo.credit && <figcaption>Photo: {photo.credit}</figcaption>}
+                </figure>
+              ))}
+            </div>
+          </section>
+        )
+      }
+
+      {
+        e.links.length > 0 && (
+          <section class="section--tight" aria-labelledby="links">
+            <h2 id="links">More about this event</h2>
+            <ul class="link-list">
+              {e.links.map((link) => (
+                <li>
+                  {linkLabel[link.kind] && <span class="tag">{linkLabel[link.kind]}</span>}
+                  <a href={link.url}>{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+
+      {
+        mentionedIn.length > 0 && (
+          <section class="section--tight" aria-labelledby="mentioned">
+            <h2 id="mentioned">In the newsletter</h2>
+            <ul class="link-list">
+              {mentionedIn.map((issue) => (
+                <li>
+                  <a href={`/newsletter/${issue.id}/`}>{issue.data.title}</a>
+                  <span class="muted"> · {longDate(issue.data.date)}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+    </div>
+
+    <aside aria-label="Event details">
+      <div class="facts-box">
+        <dl>
+          <dt>When</dt>
+          <dd>
+            <time datetime={isoDay(e.date)}>{day}</time>
+            {time && <br />}
+            {time}
+          </dd>
+          {
+            (e.location || e.online) && (
+              <>
+                <dt>Where</dt>
+                <dd>
+                  {e.location ?? "Online"}
+                  {e.location && e.online && " and online"}
+                  {e.locationNote && <br />}
+                  {e.locationNote}
+                </dd>
+              </>
+            )
+          }
+          {
+            e.format && (
+              <>
+                <dt>Format</dt>
+                <dd>{e.format}</dd>
+              </>
+            )
+          }
+          {
+            e.people.length > 0 && (
+              <>
+                <dt>With</dt>
+                {e.people.map((person) => (
+                  <dd>
+                    {person.name}
+                    {(person.role || person.affiliation) && (
+                      <span class="muted"> · {[person.role, person.affiliation].filter(Boolean).join(", ")}</span>
+                    )}
+                  </dd>
+                ))}
+              </>
+            )
+          }
+          {
+            e.partners.length > 0 && (
+              <>
+                <dt>Together with</dt>
+                <dd>{e.partners.join(", ")}</dd>
+              </>
+            )
+          }
+        </dl>
+        {
+          signupOpen && (
+            <div data-hide-after={signupUntil} hidden={signupUntil < todayZurich()}>
+              <a class="btn" href={e.signup!.url}>
+                {e.signup!.label}
+              </a>
+              {e.signup!.deadline && <p class="facts-box__note">Sign up by {longDate(e.signup!.deadline)}.</p>}
+            </div>
+          )
+        }
+        {
+          e.signup?.note && (
+            <p class="facts-box__note" data-hide-after={lastDay(e)} hidden={!upcoming}>
+              {e.signup.note}
+            </p>
+          )
+        }
+      </div>
+
+      {
+        e.flyer && (e.flyer.image || e.flyer.pdf) && (
+          <figure class="flyer">
+            {e.flyer.image && (
+              <a href={e.flyer.pdf ?? e.flyer.image}>
+                <img src={e.flyer.image} alt={`Flyer for ${e.title}`} loading="lazy" />
+              </a>
+            )}
+            {e.flyer.pdf && (
+              <figcaption>
+                <a href={e.flyer.pdf}>Download the flyer (PDF)</a>
+              </figcaption>
+            )}
+          </figure>
+        )
+      }
+    </aside>
+  </div>
+</Base>

@@ -1,0 +1,21 @@
+---
+import Base from "../layouts/Base.astro";
+import Network from "../components/Network.astro";
+---
+
+<Base title="Page not found" noindex>
+  <div class="wrap page-head">
+    <h1>This page does not exist</h1>
+    <p class="lead">
+      The site was rebuilt in November 2026 and some old addresses are gone. The <a href="/events/">events</a> and the
+      <a href="/newsletter/">newsletter archive</a> are good places to continue.
+    </p>
+    <Network class="" />
+  </div>
+</Base>
+<style>
+  svg {
+    width: 14rem;
+    margin-top: 2rem;
+  }
+</style>

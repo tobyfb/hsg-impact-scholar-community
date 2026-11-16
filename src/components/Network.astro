@@ -1,0 +1,30 @@
+---
+// Decorative motif redrawn from the community logo: a hub with spokes and rings.
+// Purely visual, hidden from screen readers.
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<svg class={className} viewBox="0 0 320 300" fill="none" aria-hidden="true" focusable="false">
+  <g stroke="#e05a47" stroke-width="9" stroke-linecap="round">
+    <path d="M150 160 L62 122" />
+    <path d="M150 160 L124 104" />
+    <path d="M150 160 L190 108" />
+    <path d="M150 160 L226 168" />
+    <path d="M150 160 L128 206" />
+  </g>
+  <circle cx="150" cy="160" r="20" fill="#ffbd59" stroke="#e05a47" stroke-width="10" />
+  <g fill="#ffbd59" stroke="#03989e" stroke-width="11">
+    <circle cx="44" cy="114" r="15" />
+    <circle cx="118" cy="88" r="15" />
+    <circle cx="244" cy="170" r="15" />
+  </g>
+  <g stroke="#154854" stroke-width="12">
+    <circle cx="206" cy="72" r="32" />
+    <circle cx="112" cy="252" r="30" />
+  </g>
+  <circle cx="262" cy="258" r="12" fill="#03989e" />
+  <circle cx="300" cy="206" r="10" fill="#e05a47" />
+</svg>

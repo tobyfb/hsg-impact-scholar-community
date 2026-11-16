@@ -1,0 +1,32 @@
+---
+// Card for an upcoming event (events list, home page).
+import type { CollectionEntry } from "astro:content";
+import { dayNumber, monthShort, fullDate, timeRange, lastDay } from "../lib/dates";
+
+interface Props {
+  event: CollectionEntry<"events">;
+}
+const { event } = Astro.props;
+const e = event.data;
+const href = `/events/${event.id}/`;
+const when = [fullDate(e.date), timeRange(e.startTime, e.endTime)].filter(Boolean).join(", ");
+---
+
+<article class="event-card" data-hide-after={lastDay(e)}>
+  <div class="date-tile" aria-hidden="true">
+    <span class="date-tile__day">{dayNumber(e.date)}</span>
+    <span class="date-tile__month">{monthShort(e.date)}</span>
+  </div>
+  <div>
+    <h3><a href={href}>{e.title}</a></h3>
+    <p class="event-card__when">
+      {e.status !== "scheduled" && <span class="tag tag--alert">{e.status}</span>}
+      {when}{e.location && ` · ${e.location}`}{e.online && " · online"}
+    </p>
+    <p>{e.summary}</p>
+    <div class="btn-row">
+      <a class="btn btn--ghost" href={href}>Details</a>
+      {e.signup?.url && e.status === "scheduled" && <a class="btn" href={e.signup.url}>{e.signup.label}</a>}
+    </div>
+  </div>
+</article>

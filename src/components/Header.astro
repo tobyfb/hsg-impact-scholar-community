@@ -1,0 +1,37 @@
+---
+interface Props {
+  current: string;
+  siteName: string;
+}
+const { current, siteName } = Astro.props;
+
+const nav = [
+  { href: "/events/", label: "Events" },
+  { href: "/people/", label: "People" },
+  { href: "/newsletter/", label: "Newsletter" },
+  { href: "/about/", label: "About" },
+  { href: "/get-involved/", label: "Get involved" },
+];
+---
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="/" aria-label={`${siteName}, home`}>
+      <img src="/brand/logo-round.png" alt="" width="48" height="48" />
+      <span>HSG Impact Scholar<br />Community</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        {
+          nav.map((item) => (
+            <li>
+              <a href={item.href} aria-current={current === item.href ? "page" : undefined}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>

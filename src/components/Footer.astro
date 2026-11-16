@@ -1,0 +1,46 @@
+---
+interface Props {
+  site: {
+    name: string;
+    description: string;
+    email: string;
+    newsletterSignupUrl: string;
+    linkedinUrl?: string;
+    teamsUrl?: string;
+    globalCommunityUrl: string;
+  };
+}
+const { site } = Astro.props;
+---
+
+<footer class="site-footer">
+  <div class="wrap site-footer__grid">
+    <div>
+      <h2>{site.name}</h2>
+      <p>{site.description}</p>
+    </div>
+    <div>
+      <h2>Stay in touch</h2>
+      <ul>
+        <li><a href={site.newsletterSignupUrl}>Subscribe to the newsletter</a></li>
+        <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+        {site.linkedinUrl && <li><a href={site.linkedinUrl}>LinkedIn group</a></li>}
+        {site.teamsUrl && <li><a href={site.teamsUrl}>Teams channel (HSG members)</a></li>}
+      </ul>
+    </div>
+    <div>
+      <h2>On this site</h2>
+      <ul>
+        <li><a href="/events/">Events</a></li>
+        <li><a href="/people/">People</a></li>
+        <li><a href="/newsletter/">Newsletter archive</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/get-involved/">Get involved</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap site-footer__bottom">
+    A local community at the University of St.Gallen, inspired by the global{" "}
+    <a href={site.globalCommunityUrl}>Impact Scholar Community</a>.
+  </div>
+</footer>
