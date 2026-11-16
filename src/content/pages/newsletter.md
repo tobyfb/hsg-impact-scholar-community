@@ -5,4 +5,5 @@ lead: News from the community and the HSG ecosystem, and invitations to our even
 ---
 
 Issues appear here as they were sent, edited for the web: personal contact details, attachments
-and expired links are removed. Earlier issues are being added.
+and expired links are removed. The archive starts in March 2022. Short reminders for single
+events are not included.
