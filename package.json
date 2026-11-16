@@ -12,6 +12,7 @@
     "check": "astro build",
     "preview": "astro preview",
     "media": "node scripts/media.mjs",
+    "import:newsletter": "node scripts/import-newsletter.mjs",
     "astro": "astro"
   },
   "dependencies": {
@@ -20,6 +21,8 @@
     "astro": "^7.4.12"
   },
   "devDependencies": {
-    "sharp": "^0.35.5"
+    "postal-mime": "^4.2.1",
+    "sharp": "^0.35.5",
+    "turndown": "^7.2.5"
   }
 }

@@ -12,3 +12,6 @@ CLAUDE.local.md
 # Editors
 .vscode/
 .idea/
+
+# Newsletter import staging: raw, unedited emails. Never commit.
+.import/
