@@ -1,0 +1,16 @@
+# Global settings. Change them here, never in the layout code.
+name: HSG Impact Scholar Community
+claim: Connect, exchange and co-create with people working towards positive impact at HSG.
+description: The HSG Impact Scholar Community connects scholars aiming to conduct research that positively contributes to the UN Sustainable Development Goals and fosters positive social and environmental change.
+# The only email address that may appear anywhere on the site.
+email: impact-scholar-community@unisg.ch
+foundedYear: 2021
+newsletterSignupUrl: https://373d1566.sibforms.com/serve/MUIFAF2m356lgkW-hci3WzeT8DQKqN4PKYy9B9B4k0xxO1nvxzMaX4YiihEKBkgYnCzm_G8C7lml4JKUkUsgSfN82DxJ0Ktrz4xOxtmyNC1Ha70D55DYMS4fxyPDmdKF8xOYNV19waj5Nq2iSZnFb9zcbCQIK5pO3LxD55wX502GKozFRwit4iow8Sh5h2QsxDybnfcNUG6loquT
+linkedinUrl: https://www.linkedin.com/groups/9079003/
+globalCommunityUrl: https://www.impactscholarcommunity.com
+# Call-out on the home page. Remove the whole block to hide it.
+callout:
+  title: Shape the next phase of the community
+  text: After five years, the founding facilitators want to hand over active stewardship, ideally to current PhD students. Co-organise one main event a year, keep the community informed, and bring your own ideas.
+  linkLabel: What stewardship involves
+  linkUrl: /get-involved/
