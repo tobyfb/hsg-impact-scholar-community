@@ -8,8 +8,8 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
-    "check": "astro build",
+    "build": "astro build && node scripts/check-dist.mjs",
+    "check": "astro build && node scripts/check-dist.mjs",
     "preview": "astro preview",
     "media": "node scripts/media.mjs",
     "import:newsletter": "node scripts/import-newsletter.mjs",
