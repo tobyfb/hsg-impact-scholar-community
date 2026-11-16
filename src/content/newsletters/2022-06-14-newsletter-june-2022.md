@@ -4,6 +4,9 @@ date: 2022-06-14
 summary: Invitation to a speech and discussion with astrophysicist Heino Falcke at SQUARE on 17 June, a save the date for a workshop on measuring societal impacts of research on 22 November, and a reminder for the community workshop on social sustainability on 1 September.
 kind: newsletter
 signedBy: [Tabea, Tobias]
+events:
+  - 2022-06-17-co-creation-and-black-holes
+  - 2022-09-01-impact-research-exchange-social-sustainability
 source: outlook
 ---
 

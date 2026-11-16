@@ -4,6 +4,10 @@ date: 2023-05-16
 summary: Invitation to the community event on navigating the academic job market for sustainability on 30 May, with an input and a panel of four assistant professors, plus a reminder of the ERS Reflection Session and a save the date for Design Y/our Future.
 kind: newsletter
 signedBy: [Tabea, Tobias]
+events:
+  - 2023-05-30-navigating-the-academic-job-market
+  - 2023-05-16-ers-reflection-session
+  - 2023-09-26-design-your-future
 source: outlook
 ---
 

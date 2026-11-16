@@ -4,6 +4,10 @@ date: 2025-08-21
 summary: Three community events, an introduction to the Ownership Project with Nien-hê Hsieh (Harvard Business School) on 27 August, a workshop on authorship challenges and the community semester kick-off on 24 September. Also a talk by Tim Jackson on the care economy.
 kind: newsletter
 signedBy: [Eugenia, Tabea, Tobias, Alina]
+events:
+  - 2025-08-27-ownership-project-nien-he-hsieh
+  - 2025-09-24-who-gets-credit-authorship-workshop
+  - 2025-09-24-semester-kick-off
 source: brevo
 ---
 

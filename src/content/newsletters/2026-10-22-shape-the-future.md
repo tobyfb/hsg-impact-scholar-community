@@ -4,7 +4,9 @@ date: 2026-10-22
 summary: Save the date for the Mini Methods Jam and Community Get-Together on 30 November, a call for new stewards to shape the next phase of the community, and news from the HSG ecosystem.
 kind: newsletter
 signedBy: [Tabea, Tobias]
-events: [2026-11-30-mini-methods-jam]
+events:
+  - 2026-11-30-mini-methods-jam
+  - 2026-03-11-methods-jam
 source: brevo
 ---
 
@@ -23,7 +25,7 @@ to reflect on how we can navigate the path towards higher impact. 🎉
 
 30 November 2026, 14:00–16:00 · SQUARE Arena
 
-We have gotten great feedback on the [Methods Jam in March](https://lnkd.in/p/e9A9s98U) and
+We have gotten great feedback on the [Methods Jam in March](https://www.linkedin.com/posts/how-can-researchers-gain-new-insights-ugcPost-7437804992809496576-8T9F/) and
 want to conduct a **Mini Methods Jam** 🎸 towards the end of the semester in combination with
 a **Community Get-Together** 🥂 and closing of the year. Please save the date. Are you
 working on an important topic with an interesting method(ology) and would you be happy to
@@ -63,14 +65,14 @@ Or let's chat at the Community Get-Together end of November. 🤩
 One of our very active and dear members, Clémentine Robert, just got selected to the latest
 cohort of the Mentoring Programme of the
 [Global Impact Scholar Community](https://www.impactscholarcommunity.com/) for 2026-2027 🥳
-([LinkedIn post](https://lnkd.in/p/eAmPSMMY)). For the third cohort in a row, a member of our
+([LinkedIn post](https://www.linkedin.com/posts/welcome-our-new-mentees-2026-27-a-very-share-7517770822401359872-TWX6/)). For the third cohort in a row, a member of our
 local community was able to enjoy this great opportunity! It shows what this community makes
 possible: growing further and staying connected to a wider network of scholars who care
 about impact. ✨
 
 We also got a nice **shout-out** 📣 from RISE-HSG director and HSG Delegate for Responsibility
 & Sustainability, **Judith Walls**, in a recent reflection on the importance of
-[building communities for better business schools](https://lnkd.in/p/eDY8295Q) (if you don't
+[building communities for better business schools](https://www.linkedin.com/posts/judithwalls_building-better-business-schools-ugcPost-7518685303264608256-mQT2/) (if you don't
 want to [abolish business schools](https://lnkd.in/p/eRGNBp3XA) altogether).
 
 You can find some further updates from the ecosystem below.
@@ -122,7 +124,7 @@ Highlights included a **Bridge Lab** by CLIS-HSG, in which participants from dif
 sectors helped Hilti and Spare Energy turn ideas on the second life of batteries into
 business models, and the AI-supported Albert(ine) persona at OST, which collected visitors'
 challenges and wishes for the future, as well as an **Open Space** with partners. Find more
-impressions in [this LinkedIn post](https://lnkd.in/p/ef7_jCyB).
+impressions in [this LinkedIn post](https://www.linkedin.com/posts/tobias-fehr-bosshard-6a6b8a22_am-vergangenen-freitag-und-samstag-fand-der-ugcPost-7508127310588416001-elJ1/).
 
 The Prologue was initiated by the
 [St.Gallen Transformation Lab](https://transformation-lab.co/) (HSG and OST), supported by

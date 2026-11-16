@@ -4,6 +4,9 @@ date: 2025-02-17
 summary: Two community events in March, the Impact Thesis event with ECOnnect on 3 March and a brownbag lunch on impact research with Prof. Ed Freeman on 13 March. Also further events with Ed Freeman at SQUARE, the PRME awards and the oikos Sustainability Week.
 kind: newsletter
 signedBy: [Eugenia, Tabea, Tobias, Alina]
+events:
+  - 2025-03-03-impact-thesis-event
+  - 2025-03-13-brownbag-what-is-impact-research
 source: brevo
 ---
 

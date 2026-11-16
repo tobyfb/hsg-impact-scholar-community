@@ -4,6 +4,10 @@ date: 2023-02-06
 summary: Invitation to the community event on AI and digital ethics, co-hosted by the Institute for Business Ethics on 15 February, news that the community is the first local spin-off of the Global Impact Scholar Community, and further upcoming events.
 kind: newsletter
 signedBy: [Tabea, Tobias]
+events:
+  - 2023-02-15-ai-promises-and-perils
+  - 2023-03-01-academic-poster-session
+  - 2023-03-16-workshop-quantitative-sustainability-research
 source: outlook
 ---
 

@@ -4,6 +4,11 @@ date: 2023-04-18
 summary: Upcoming community events Design Y/our Future with Prof. Sebastian Kernbach on 10 May and an ERS Reflection Session on 16 May, news from the HSG ecosystem such as the HSG Ecosystem Navigator, and a look back at the events in March.
 kind: newsletter
 signedBy: [Tabea, Tobias]
+events:
+  - 2023-05-16-ers-reflection-session
+  - 2023-09-26-design-your-future
+  - 2023-03-13-hsg-2030-workshop-with-maja-goepel
+  - 2023-03-16-workshop-quantitative-sustainability-research
 source: outlook
 ---
 

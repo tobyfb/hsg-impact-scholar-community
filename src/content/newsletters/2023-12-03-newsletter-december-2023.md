@@ -4,6 +4,9 @@ date: 2023-12-03
 summary: X-mas get together on 19 December and a research session on qualitative research for positive impact on 7 December, the new MS Teams team of the community, other events at HSG and research opportunities such as jobs, calls and awards.
 kind: newsletter
 signedBy: [Eugenia, Tabea, Lasse, Tobias]
+events:
+  - 2023-12-07-qualitative-research-towards-positive-impact
+  - 2023-12-19-reflecting-on-cop-28-and-holiday-event
 source: outlook
 ---
 

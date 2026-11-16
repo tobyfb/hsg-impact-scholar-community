@@ -4,6 +4,11 @@ date: 2024-04-15
 summary: Upcoming community events, namely a Mock AOM 2024 session, an inclusive language workshop, a research World-Café during the Latin American week and a spring hike, plus news from the HSG ecosystem and calls for papers.
 kind: newsletter
 signedBy: [Eugenia, Lasse, Tabea, Tobias]
+events:
+  - 2024-07-25-conference-preparation-space
+  - 2024-06-27-inclusive-language-workshop
+  - 2024-10-23-world-cafe-latin-america
+  - 2024-06-14-spring-hike
 source: outlook
 ---
 

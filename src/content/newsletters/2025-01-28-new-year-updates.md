@@ -4,6 +4,10 @@ date: 2025-01-28
 summary: Three upcoming community events, the Impact Thesis event and the Academic Poster Session on 3 March and a brownbag lunch on impact research with Prof. Ed Freeman on 13 March. Also the Positive Impact Collaboration and Mindful Co-working Days.
 kind: newsletter
 signedBy: [Eugenia, Tabea, Tobias, Alina]
+events:
+  - 2025-03-03-impact-thesis-event
+  - 2025-03-03-academic-poster-session
+  - 2025-03-13-brownbag-what-is-impact-research
 source: brevo
 ---
 

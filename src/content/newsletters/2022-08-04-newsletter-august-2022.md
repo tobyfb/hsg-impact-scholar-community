@@ -4,6 +4,9 @@ date: 2022-08-04
 summary: Invitation to the research exchange on social sustainability hosted by Prof. Jamie Gloor, two events from the HSG ecosystem, and a look back at astrophysicist Heino Falcke's talk at SQUARE.
 kind: newsletter
 signedBy: [Tabea, Tobias]
+events:
+  - 2022-09-01-impact-research-exchange-social-sustainability
+  - 2022-06-17-co-creation-and-black-holes
 source: website-2022
 ---
 

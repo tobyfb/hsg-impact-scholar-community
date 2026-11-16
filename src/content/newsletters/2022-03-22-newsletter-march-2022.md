@@ -4,6 +4,9 @@ date: 2022-03-22
 summary: Invitation to the first community workshop hosted by the Chair for Sustainability Management on 30 March, a look back at the get-together of 8 March and the oikos Sustainability Week, and a blog feature on co-founder Miron Avidan.
 kind: newsletter
 signedBy: [Tabea, Tobias]
+events:
+  - 2022-03-30-impact-research-workshop
+  - 2022-03-08-get-together
 source: outlook
 ---
 

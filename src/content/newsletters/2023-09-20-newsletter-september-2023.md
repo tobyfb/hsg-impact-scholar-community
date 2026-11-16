@@ -4,6 +4,9 @@ date: 2023-09-20
 summary: Semester kick-off workshop with Sebastian Kernbach on 26 September, Biodiversity Collage, DocNet Symposium and further community events, plus upcoming courses and seminars and offers to integrate sustainability into teaching.
 kind: newsletter
 signedBy: [Tabea, Tobias]
+events:
+  - 2023-09-26-design-your-future
+  - 2023-10-05-biodiversity-collage
 source: outlook
 ---
 

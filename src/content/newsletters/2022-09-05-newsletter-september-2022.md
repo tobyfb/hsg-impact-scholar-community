@@ -4,6 +4,8 @@ date: 2022-09-05
 summary: A new PhD course on ethics, responsibility and sustainability, the NextGen sustainability mentoring track, and a look back at the research exchange on social sustainability.
 kind: newsletter
 signedBy: [Tabea, Tobias]
+events:
+  - 2022-09-01-impact-research-exchange-social-sustainability
 source: website-2022
 ---
 

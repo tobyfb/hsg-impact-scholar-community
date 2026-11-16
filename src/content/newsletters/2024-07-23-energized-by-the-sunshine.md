@@ -4,6 +4,8 @@ date: 2024-07-23
 summary: Invitation to the Conference Preparation Space (aka Mock AOM) on 25 July, a planned workshop on Awareness through Movement, and news from the HSG ecosystem such as the Positive Impact Collaboration and the St.Galler Diversity & Inclusion Week.
 kind: newsletter
 signedBy: [Eugenia, Tabea, Tobias]
+events:
+  - 2024-07-25-conference-preparation-space
 source: brevo
 ---
 

@@ -4,6 +4,10 @@ date: 2023-03-06
 summary: Invitation to the HSG 2030 workshop with Prof. Maja Göpel on 13 March, a short look back at the event on AI and digital ethics and the academic poster session, and further events from the HSG ecosystem.
 kind: newsletter
 signedBy: [Tabea, Tobias]
+events:
+  - 2023-03-13-hsg-2030-workshop-with-maja-goepel
+  - 2023-02-15-ai-promises-and-perils
+  - 2023-03-01-academic-poster-session
 source: outlook
 ---
 

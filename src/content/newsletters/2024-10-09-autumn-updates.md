@@ -4,6 +4,8 @@ date: 2024-10-09
 summary: A World Café on impactful research in the context of Latin America on 23 October, the launch of monthly online research meetings, and events from the HSG ecosystem such as the DocNet Symposium on rethinking growth.
 kind: newsletter
 signedBy: [Eugenia, Tabea, Tobias]
+events:
+  - 2024-10-23-world-cafe-latin-america
 source: brevo
 ---
 

@@ -4,6 +4,10 @@ date: 2022-11-23
 summary: Invitation to the Holiday Event on 13 December, a save the date for the research exchange on ethics, psychology and responsibility on 15 February, a reminder for the job talk simulation by Miron Avidan on 30 November, and news from the HSG ecosystem.
 kind: newsletter
 signedBy: [Tabea, Tobias]
+events:
+  - 2022-12-13-holiday-event
+  - 2023-02-15-ai-promises-and-perils
+  - 2022-11-30-job-talk-simulation
 source: outlook
 ---
 

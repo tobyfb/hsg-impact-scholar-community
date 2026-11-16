@@ -4,6 +4,9 @@ date: 2022-12-22
 summary: Holiday greetings and a preview of 2023 with the Academic Poster Session on 1 March, the first Workshop on Quantitative Sustainability Research on 16 March, the ARCS conference in June and a public event on water as a human right on 18 January.
 kind: newsletter
 signedBy: [Tabea, Tobias]
+events:
+  - 2023-03-01-academic-poster-session
+  - 2023-03-16-workshop-quantitative-sustainability-research
 source: outlook
 ---
 

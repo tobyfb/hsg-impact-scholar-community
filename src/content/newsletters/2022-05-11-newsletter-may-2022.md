@@ -4,6 +4,9 @@ date: 2022-05-11
 summary: Invitation to the second community workshop of the Impact Research Exchange Series, on social sustainability and hosted by the team of Prof. Jamie Gloor on 1 September, and a look back at the workshop with the Chair for Sustainability Management.
 kind: newsletter
 signedBy: [Tabea]
+events:
+  - 2022-09-01-impact-research-exchange-social-sustainability
+  - 2022-03-30-impact-research-workshop
 source: outlook
 ---
 

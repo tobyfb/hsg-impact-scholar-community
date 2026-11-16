@@ -4,6 +4,8 @@ date: 2023-09-18
 summary: Invitation to the semester kick-off with Sebastian Kernbach on 26 September, the member survey 2023, and a call for collaboration two years after the launch of the community.
 kind: newsletter
 signedBy: [Tabea, Tobias]
+events:
+  - 2023-09-26-design-your-future
 source: outlook
 ---
 

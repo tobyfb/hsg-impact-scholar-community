@@ -4,6 +4,9 @@ date: 2023-06-15
 summary: A call to help rate HSG's material topics for an integrated sustainability strategy, upcoming events from a mindful co-working day to biodiversity workshops, news from the HSG ecosystem and a look back at the event on the academic job market.
 kind: newsletter
 signedBy: [Tabea, Tobias]
+events:
+  - 2023-10-05-biodiversity-collage
+  - 2023-05-30-navigating-the-academic-job-market
 source: outlook
 ---
 

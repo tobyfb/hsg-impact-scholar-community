@@ -4,6 +4,10 @@ date: 2026-02-06
 summary: The Methods Jam on 11 March celebrates five years of the community. Also the fifth Academic Poster Session on 16 April, a virtual event series on the impact of your research with the AOM Impact Scholar Community, and news from the HSG ecosystem.
 kind: newsletter
 signedBy: [Tabea, Tobias]
+events:
+  - 2026-03-11-methods-jam
+  - 2026-04-16-academic-poster-session
+  - 2026-02-13-exploring-the-impact-of-your-research
 source: brevo
 ---
 

@@ -4,6 +4,8 @@ date: 2022-09-26
 summary: A look back at the participatory leadership training at SQUARE, an invitation to a job talk simulation by Miron Avidan on 26 October, a call for interest in a paper development workshop, and events, calls and teaching support from the HSG ecosystem.
 kind: newsletter
 signedBy: [Tabea, Tobias]
+events:
+  - 2022-11-30-job-talk-simulation
 source: outlook
 ---
 

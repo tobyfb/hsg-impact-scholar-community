@@ -4,6 +4,8 @@ date: 2025-12-01
 summary: Invitation to the traditional Holiday Event on 10 December, with space to share gratitude, plan the community year 2026 together and say goodbye to Eugenia. Also a short notice on making your work visible at the Sustainable University Day.
 kind: newsletter
 signedBy: [Eugenia, Tabea, Tobias]
+events:
+  - 2025-12-10-holiday-event
 source: brevo
 ---
 
