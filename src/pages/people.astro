@@ -75,10 +75,10 @@ const bios = new Map(rendered);
                     {community && <span class="muted">{community}</span>}
                   </p>
                   <Bio />
-                  {m.researchInterests.length > 0 && (
+                  {m.researchInterests && (
                     <>
                       <p class="person__label">Research interests</p>
-                      <ul class="chips">{m.researchInterests.map((item) => <li>{item}</li>)}</ul>
+                      <p>{m.researchInterests}</p>
                     </>
                   )}
                   {m.methods.length > 0 && (

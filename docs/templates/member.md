@@ -10,9 +10,11 @@ position: PhD candidate    # role at HSG; for alumni who have left HSG, what the
 unit: Institute for Economy and the Environment (IWÖ-HSG)   # for alumni who have left HSG, where they are now
 # unitUrl: https://iwoe.unisg.ch
 photo: /media/members/firstname-lastname.jpg   # square, at least 600 px; delete the line if there is none
-researchInterests:         # up to six; required for facilitators
-  - First interest
-  - Second interest
+# One or two sentences in the person's own words; required for facilitators.
+# Keep the ">-" and indent the text by two spaces.
+researchInterests: >-
+  I study how companies work with their suppliers on climate targets, and what makes
+  such collaborations last.
 methods:                   # optional, up to six
   - A method
 links:                     # all optional

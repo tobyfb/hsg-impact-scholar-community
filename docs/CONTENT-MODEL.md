@@ -54,8 +54,9 @@ A profile consists of:
 - `position` and `unit`: the role at HSG and the institute, written out. For alumni who
   have left HSG: what they do now and where.
 - `photo`: optional, square. Without it the page shows the initials.
-- `researchInterests` (required for facilitators) and `methods`, up to six short entries
-  each.
+- `researchInterests`: one or two sentences in the person's own words, at most 400
+  characters. Required for facilitators. Do not rewrite it into keywords.
+- `methods`: optional, up to six short entries.
 - `facilitatorFrom` and `facilitatorUntil`: the years in the facilitator team, for
   facilitators and alumni. The page turns them into "Facilitator since 2024" or
   "Facilitator 2021–2023". When someone leaves the team, set `group: alumni` and add

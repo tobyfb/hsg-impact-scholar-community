@@ -114,7 +114,11 @@ const members = defineCollection({
       unit: z.string(), // institute or organisation, written out; for alumni where they are now
       unitUrl: url.optional(),
       photo: media.optional(), // square, at least 600 px; initials are shown if missing
-      researchInterests: z.array(z.string()).max(6).default([]),
+      // One or two sentences in the person's own words.
+      researchInterests: z
+        .string()
+        .max(400, "Keep research interests to one or two sentences (at most 400 characters)")
+        .optional(),
       methods: z.array(z.string()).max(6).default([]),
       links: z
         .object({
@@ -142,8 +146,8 @@ const members = defineCollection({
     .strict()
     .superRefine((m, ctx) => {
       const issue = (path: string, message: string) => ctx.addIssue({ code: "custom", path: [path], message });
-      if (m.group === "facilitator" && m.researchInterests.length === 0) {
-        issue("researchInterests", "A facilitator needs at least one research interest");
+      if (m.group === "facilitator" && !m.researchInterests?.trim()) {
+        issue("researchInterests", "A facilitator needs one or two sentences on their research interests");
       }
       if (m.group === "facilitator" && m.facilitatorUntil) {
         issue("facilitatorUntil", "An end year means the person has left the team: set group to alumni");
