@@ -40,7 +40,7 @@ export async function getNewsletters() {
   );
 }
 
-/** Members, facilitators first, then by `order`, then by name. */
+/** Members by `order`, then by name. The people page splits them into its three groups. */
 export async function getMembers() {
   return (await getCollection("members", published)).sort(
     (a, b) => a.data.order - b.data.order || a.data.name.localeCompare(b.data.name),

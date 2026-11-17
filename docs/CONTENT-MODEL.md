@@ -40,11 +40,31 @@ closed.
 
 A person is listed only after they agreed. Record that in `consent` (`given: true` and the
 day they agreed). Keep their message in the facilitators' mailbox, not in this repository.
-The text below the frontmatter is an optional bio of two or three sentences.
 
-- `role: facilitator`: part of the current steward team.
-- `role: collaborator`: co-organises a format or event with the community.
-- `status: alumni`: founders and former facilitators.
+The people page has three groups, set with `group`:
+
+- `facilitator`: part of the current facilitator team.
+- `alumni`: former facilitators, including the founders.
+- `supporter`: collaborators and supporters, people who co-organise a format or event with
+  the community or back it in another way.
+
+A profile consists of:
+
+- `name`
+- `position` and `unit`: the role at HSG and the institute, written out. For alumni who
+  have left HSG: what they do now and where.
+- `photo`: optional, square. Without it the page shows the initials.
+- `researchInterests` (required for facilitators) and `methods`, up to six short entries
+  each.
+- `facilitatorFrom` and `facilitatorUntil`: the years in the facilitator team, for
+  facilitators and alumni. The page turns them into "Facilitator since 2024" or
+  "Facilitator 2021–2023". When someone leaves the team, set `group: alumni` and add
+  `facilitatorUntil`; do not delete the profile unless the person asks for it.
+- `roleNote`: optional and short, such as "Co-founder".
+- The text below the frontmatter: two or three sentences on what the person does or did in
+  the community. Not a CV.
+- `links`: HSG profile, website, LinkedIn, Bluesky, Google Scholar, ORCID. All optional.
+  No email address; contact runs through the community address.
 
 ## Newsletters
 

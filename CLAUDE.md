@@ -54,12 +54,17 @@ personal email address on the second page, and then the PDF stays out.
 1. The person must have agreed to be listed. Ask the maintainer for the person's reply and
    its date if you do not have it. Without it, stop.
 2. Copy `docs/templates/member.md` to `src/content/members/firstname-lastname.md` and fill
-   in name, role, unit, research interests and methods.
+   it in. `group` decides where the person appears: `facilitator`, `alumni` (former
+   facilitator) or `supporter` (collaborators and supporters). The text below the
+   frontmatter says in two or three sentences what the person does in the community.
 3. Set `consent.given: true` and `consent.date` to the day the person agreed. The reply
    itself stays in the facilitators' mailbox, not in this repository.
 4. The photo is optional: square, saved as `public/media/members/firstname-lastname.jpg`,
    then `npm run media`.
 5. Run `npm run check`. Commit as `Content: add member <name>` and push.
+
+When a facilitator leaves the team, keep the file: set `group: alumni` and add
+`facilitatorUntil` with the year.
 
 ## Recipe: add a newsletter issue
 

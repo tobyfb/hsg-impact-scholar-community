@@ -98,25 +98,32 @@ const events = defineCollection({
 
 // src/content/members/firstname-lastname.md. No email or phone field on purpose:
 // contact runs through the community address.
+const year = z.number().int().min(2021).max(2100);
+
 const members = defineCollection({
   loader: glob({ pattern: "*.md", base: "./src/content/members" }),
   schema: z
     .object({
       name: z.string(),
-      role: z.enum(["facilitator", "collaborator"]),
-      status: z.enum(["active", "alumni"]).default("active"),
-      roleNote: z.string().optional(), // "Co-founder", "Facilitator since 2026"
-      position: z.string().optional(), // "PhD candidate", "Postdoc"
-      unit: z.string(), // organisational unit, written out
+      // The three groups of the people page.
+      group: z.enum(["facilitator", "alumni", "supporter"]),
+      facilitatorFrom: year.optional(), // year they joined the facilitator team
+      facilitatorUntil: year.optional(), // year they left it (alumni only)
+      roleNote: z.string().optional(), // "Co-founder", "Co-host of the Academic Poster Session"
+      position: z.string().optional(), // "PhD candidate", "Postdoc", "Assistant professor"
+      unit: z.string(), // institute or organisation, written out; for alumni where they are now
       unitUrl: url.optional(),
       photo: media.optional(), // square, at least 600 px; initials are shown if missing
-      researchInterests: z.array(z.string()).min(1).max(6),
+      researchInterests: z.array(z.string()).max(6).default([]),
       methods: z.array(z.string()).max(6).default([]),
       links: z
         .object({
           profile: url.optional(), // HSG profile page
-          linkedin: url.optional(),
           website: url.optional(),
+          linkedin: url.optional(),
+          bluesky: url.optional(),
+          scholar: url.optional(), // Google Scholar
+          orcid: url.optional(),
         })
         .strict()
         .default({}),
@@ -132,7 +139,22 @@ const members = defineCollection({
       order: z.number().default(100),
       draft: z.boolean().default(false),
     })
-    .strict(),
+    .strict()
+    .superRefine((m, ctx) => {
+      const issue = (path: string, message: string) => ctx.addIssue({ code: "custom", path: [path], message });
+      if (m.group === "facilitator" && m.researchInterests.length === 0) {
+        issue("researchInterests", "A facilitator needs at least one research interest");
+      }
+      if (m.group === "facilitator" && m.facilitatorUntil) {
+        issue("facilitatorUntil", "An end year means the person has left the team: set group to alumni");
+      }
+      if (m.group === "supporter" && (m.facilitatorFrom || m.facilitatorUntil)) {
+        issue("facilitatorFrom", "Facilitator years are for the groups facilitator and alumni only");
+      }
+      if (m.facilitatorFrom && m.facilitatorUntil && m.facilitatorUntil < m.facilitatorFrom) {
+        issue("facilitatorUntil", "facilitatorUntil is earlier than facilitatorFrom");
+      }
+    }),
 });
 
 // src/content/newsletters/YYYY-MM-DD-short-title.md, body in the house format

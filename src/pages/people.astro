@@ -8,10 +8,20 @@ const { Content } = await render(page);
 const members = await getMembers();
 
 const groups = [
-  { id: "facilitators", title: "Facilitators", list: members.filter((m) => m.data.role === "facilitator" && m.data.status === "active") },
-  { id: "collaborators", title: "Collaborators", list: members.filter((m) => m.data.role === "collaborator" && m.data.status === "active") },
-  { id: "alumni", title: "Founders and former facilitators", list: members.filter((m) => m.data.status === "alumni") },
+  { id: "facilitators", title: "Facilitators", list: members.filter((m) => m.data.group === "facilitator") },
+  { id: "alumni", title: "Former facilitators", list: members.filter((m) => m.data.group === "alumni") },
+  { id: "supporters", title: "Collaborators and supporters", list: members.filter((m) => m.data.group === "supporter") },
 ].filter((group) => group.list.length > 0);
+
+// "Facilitator since 2024", "Facilitator 2021–2023", "Facilitator until 2023"
+const facilitatorLine = (m: (typeof members)[number]["data"]) => {
+  if (m.group === "supporter") return undefined;
+  const { facilitatorFrom: from, facilitatorUntil: until } = m;
+  if (m.group === "facilitator") return from ? `Facilitator since ${from}` : undefined;
+  if (from && until) return from === until ? `Facilitator ${from}` : `Facilitator ${from}–${until}`;
+  if (until) return `Facilitator until ${until}`;
+  return from ? `Facilitator from ${from}` : undefined;
+};
 
 const initials = (name: string) =>
   name
@@ -40,10 +50,14 @@ const bios = new Map(rendered);
           {group.list.map((member) => {
             const m = member.data;
             const Bio = bios.get(member.id)!;
+            const community = [m.roleNote, facilitatorLine(m)].filter(Boolean).join(" · ");
             const links = [
-              m.links.profile && { href: m.links.profile, label: "Profile" },
-              m.links.linkedin && { href: m.links.linkedin, label: "LinkedIn" },
+              m.links.profile && { href: m.links.profile, label: "HSG profile" },
               m.links.website && { href: m.links.website, label: "Website" },
+              m.links.linkedin && { href: m.links.linkedin, label: "LinkedIn" },
+              m.links.bluesky && { href: m.links.bluesky, label: "Bluesky" },
+              m.links.scholar && { href: m.links.scholar, label: "Google Scholar" },
+              m.links.orcid && { href: m.links.orcid, label: "ORCID" },
             ].filter(Boolean) as { href: string; label: string }[];
             return (
               <article class="person" id={member.id}>
@@ -55,13 +69,18 @@ const bios = new Map(rendered);
                 <div>
                   <h3>{m.name}</h3>
                   <p>
-                    {[m.roleNote, m.position].filter(Boolean).join(" · ")}
-                    {(m.roleNote || m.position) && <br />}
+                    {m.position && `${m.position}, `}
                     {m.unitUrl ? <a href={m.unitUrl}>{m.unit}</a> : m.unit}
+                    {community && <br />}
+                    {community && <span class="muted">{community}</span>}
                   </p>
                   <Bio />
-                  <p class="person__label">Research interests</p>
-                  <ul class="chips">{m.researchInterests.map((item) => <li>{item}</li>)}</ul>
+                  {m.researchInterests.length > 0 && (
+                    <>
+                      <p class="person__label">Research interests</p>
+                      <ul class="chips">{m.researchInterests.map((item) => <li>{item}</li>)}</ul>
+                    </>
+                  )}
                   {m.methods.length > 0 && (
                     <>
                       <p class="person__label">Methods</p>
