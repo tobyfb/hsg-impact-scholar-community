@@ -9,7 +9,7 @@ format: Method spotlights and get-together
 series: methods
 summary: Short spotlights on research methods for impact-oriented work, followed by a get-together that closes the year and opens the next phase of the community.
 signup:
-  note: Save the date. The sign-up link follows here shortly.
+  url: https://forms.cloud.microsoft/e/X4wTB4THR9
 shareImage: /media/events/2026-11-30-mini-methods-jam/share.png
 ---
 
