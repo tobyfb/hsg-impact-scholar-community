@@ -24,8 +24,8 @@ links:                     # all optional
   # bluesky: https://bsky.app/profile/...
   # scholar: https://scholar.google.com/citations?user=...
   # orcid: https://orcid.org/...
-consent:
-  given: true              # true only once the person has agreed
+consent:                   # leave these three lines out while the person has not agreed yet;
+  given: true              # the profile is then a draft, shown on preview branches only
   date: 2027-01-15         # the day they agreed
 # order: 10                # lower numbers come first within the group
 ---

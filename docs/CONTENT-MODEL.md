@@ -38,8 +38,15 @@ closed.
 
 `src/content/members/firstname-lastname.md`. Template: `docs/templates/member.md`.
 
-A person is listed only after they agreed. Record that in `consent` (`given: true` and the
-day they agreed). Keep their message in the facilitators' mailbox, not in this repository.
+A person is listed on the live site only after they agreed. Record that in `consent`
+(`given: true` and the day they agreed). Keep their message in the facilitators' mailbox,
+not in this repository.
+
+A profile without `consent` is a draft. It is shown, marked "Draft, not yet confirmed",
+with `npm run dev` and on the preview address of a branch, so the person can look at their
+entry before they agree. The build of `main` refuses it. Keep drafts on their own branch
+and bring a profile to `main` only together with its `consent` lines. The repository is
+public: a draft pushed to a branch can be read by anyone who looks for it.
 
 The people page has three groups, set with `group`:
 

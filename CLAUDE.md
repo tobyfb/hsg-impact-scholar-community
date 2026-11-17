@@ -52,7 +52,9 @@ personal email address on the second page, and then the PDF stays out.
 ## Recipe: add a member
 
 1. The person must have agreed to be listed. Ask the maintainer for the person's reply and
-   its date if you do not have it. Without it, stop.
+   its date if you do not have it. Without it, the profile can only be a draft: leave
+   `consent` out and push it to a branch of its own, never to `main`. The branch preview
+   shows it marked as a draft, so the person can look at it and confirm.
 2. Copy `docs/templates/member.md` to `src/content/members/firstname-lastname.md` and fill
    it in. `group` decides where the person appears: `facilitator`, `alumni` (former
    facilitator) or `supporter` (collaborators and supporters). The text below the

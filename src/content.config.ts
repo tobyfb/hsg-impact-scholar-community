@@ -131,7 +131,9 @@ const members = defineCollection({
         })
         .strict()
         .default({}),
-      // A member file only builds once the person has agreed to be listed publicly.
+      // Recorded once the person has agreed to be listed publicly. Without it the profile
+      // is a draft: visible on preview branches only. The build of the live site refuses
+      // it (getMembers in src/lib/content.ts and scripts/check-dist.mjs).
       consent: z
         .object({
           given: z.literal(true, {
@@ -139,14 +141,16 @@ const members = defineCollection({
           }),
           date: z.coerce.date(), // day they agreed
         })
-        .strict(),
+        .strict()
+        .optional(),
       order: z.number().default(100),
       draft: z.boolean().default(false),
     })
     .strict()
     .superRefine((m, ctx) => {
       const issue = (path: string, message: string) => ctx.addIssue({ code: "custom", path: [path], message });
-      if (m.group === "facilitator" && !m.researchInterests?.trim()) {
+      // A draft may still be incomplete.
+      if (m.consent && m.group === "facilitator" && !m.researchInterests?.trim()) {
         issue("researchInterests", "A facilitator needs one or two sentences on their research interests");
       }
       if (m.group === "facilitator" && m.facilitatorUntil) {

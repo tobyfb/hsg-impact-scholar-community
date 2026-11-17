@@ -67,6 +67,7 @@ const bios = new Map(rendered);
                   <div class="person__photo" aria-hidden="true">{initials(m.name)}</div>
                 )}
                 <div>
+                  {!m.consent && <p class="person__draft">Draft, not yet confirmed</p>}
                   <h3>{m.name}</h3>
                   <p>
                     {m.position && `${m.position}, `}

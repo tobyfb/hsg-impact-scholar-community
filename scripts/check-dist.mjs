@@ -6,6 +6,8 @@
 //   2. No meeting links (Teams, Zoom) and no links to SharePoint.
 //   3. Every internal link and every file under /media/, /brand/ … exists.
 //   4. The date at the start of an event or newsletter file name is the date in the file.
+//   5. Every member file records the person's agreement (consent), except on a Cloudflare
+//      preview branch, where profiles without it are shown as drafts.
 import { readdir, readFile, stat } from "node:fs/promises";
 import { join, relative } from "node:path";
 
@@ -92,6 +94,24 @@ for (const collection of ["events", "newsletters"]) {
     const inFile = text.match(/^date:\s*["']?(\d{4}-\d{2}-\d{2})/m)?.[1];
     if (inFile && inFile !== inName) {
       problem(where, `file name says ${inName}, but date in the file is ${inFile}`);
+    }
+  }
+}
+
+// --- member consent ---------------------------------------------------------------------
+const branch = process.env.CF_PAGES_BRANCH;
+const isPreviewBranch = !!branch && branch !== "main";
+if (!isPreviewBranch && (await exists("src/content/members"))) {
+  for (const name of await readdir("src/content/members")) {
+    if (!name.endsWith(".md")) continue;
+    const text = await readFile(join("src/content/members", name), "utf8");
+    const frontmatter = text.split(/^---\s*$/m)[1] ?? "";
+    if (/^draft:\s*true\s*$/m.test(frontmatter)) continue;
+    if (!/^consent:/m.test(frontmatter) || !/^\s+given:\s*true\b/m.test(frontmatter)) {
+      problem(
+        join("src/content/members", name),
+        "no recorded agreement (consent). Such a profile may be shown on a preview branch, not on the live site",
+      );
     }
   }
 }
