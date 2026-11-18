@@ -1,0 +1,18 @@
+---
+import Base from "../layouts/Base.astro";
+import { render } from "astro:content";
+import { getPage } from "../lib/content";
+
+const page = await getPage("imprint");
+const { Content } = await render(page);
+---
+
+<Base title={page.data.title} description={page.data.description}>
+  <div class="wrap page-head">
+    <h1>{page.data.title}</h1>
+    {page.data.lead && <p class="lead">{page.data.lead}</p>}
+  </div>
+  <div class="wrap">
+    <div class="prose"><Content /></div>
+  </div>
+</Base>
