@@ -117,7 +117,7 @@ const members = defineCollection({
       // One or two sentences in the person's own words.
       researchInterests: z
         .string()
-        .max(400, "Keep research interests to one or two sentences (at most 400 characters)")
+        .max(480, "Keep research interests to one or two sentences (at most 480 characters)")
         .optional(),
       methods: z.array(z.string()).max(6).default([]),
       links: z
