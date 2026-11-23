@@ -14,5 +14,5 @@ links:
 #   date: 2026-11-__       # the day they confirmed
 ---
 
-Felicitas co-founded the community in 2021 during her PhD at HSG on circular economy and
+I co-founded the community in 2021 during my PhD at HSG on circular economy and
 sustainable business models.
