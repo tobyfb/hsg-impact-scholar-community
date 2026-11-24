@@ -17,5 +17,6 @@ links:
 #   date: 2026-11-__       # the day they confirmed
 ---
 
-I was part of the facilitator team from 2023 to 2025, during my PhD at HSG. Before that I
-co-organised the Impact Research Exchange on social sustainability in 2022.
+I was part of the facilitator team from 2023 to 2025, during my PhD at HSG helping in the
+organization and promotion of social and professional development events for the HSG Impact
+Scholar Community.
