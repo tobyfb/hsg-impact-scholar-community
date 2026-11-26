@@ -7,9 +7,11 @@ unit: Institute of Responsible Innovation, Sustainability and Energy (RISE-HSG)
 unitUrl: https://rise.unisg.ch
 photo: /media/members/isabelle-buerger.jpg
 researchInterests: >-
-  My PhD examines how governance structures in horticultural value chains affect
-  biodiversity outcomes, with an empirical focus on southern Spain. I bring together new
-  institutional economics, global value chain theory and agroecology.
+  My research is at the intersection of international business, strategic management and
+  economic geography, examining how trust shapes the way firms manage their dependence on
+  natural resources and the environmental risks these create. Drawing on spatial data and
+  global value chain research, I empirically investigate specialized agricultural production
+  regions in southern Spain and their value chain partners.
 methods:
   - GIS and spatial analysis
   - Qualitative methods
@@ -17,9 +19,9 @@ links:
   profile: https://rise.unisg.ch/en/the-institute/about-us/team/detail/person-id/68e1abc4-2e8a-45f5-be0b-a4f052eb1f98/
   website: https://isabeekat.github.io/
   linkedin: https://www.linkedin.com/in/isabelle-k-a-buerger/
-# consent:                 # add only after the person has confirmed the profile
-#   given: true
-#   date: 2026-11-__       # the day they confirmed
+consent:
+  given: true
+  date: 2026-11-26
 ---
 
 <!-- To add by Isabelle: one or two sentences on what she does or plans to do in the community. -->
