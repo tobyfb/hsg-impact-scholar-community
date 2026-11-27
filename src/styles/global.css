@@ -332,6 +332,8 @@ a:hover {
   width: 100%;
   max-width: 54rem;
   margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  /* The logo is a JPEG on white; multiply lets the page colour show through the white. */
+  mix-blend-mode: multiply;
 }
 
 .hero h1 {
