@@ -6,9 +6,9 @@ lead: There are several ways to take part, from presenting your work to helping 
 
 ## Become a steward
 
-We founded the community during our own PhDs, which concluded a while ago. We would love to
-hand over active stewardship to new people, ideally current PhD students, who want to
-co-shape the future of the community.
+We founded the community during our own PhDs, which concluded a while ago. We are now in the
+process of handing over stewardship to a new group of PhD students who want to co-shape the
+future of the community. If you would like to join them, please reach out.
 
 What this looks like:
 
