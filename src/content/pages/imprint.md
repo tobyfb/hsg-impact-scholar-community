@@ -34,8 +34,7 @@ For the University of St.Gallen in general, see its
 
 ## People and photos on this website
 
-Facilitators, collaborators and supporters are listed on the people page with their
-agreement. Photos show community events.
+Profiles on the people page are published with the agreement of the person concerned. Photos show community events.
 
 Would you like your name, your profile or a photo of you changed or removed? Write to us and
 we will do it promptly. You do not need to give a reason.

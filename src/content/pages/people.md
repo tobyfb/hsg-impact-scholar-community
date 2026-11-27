@@ -14,9 +14,9 @@ Impact Scholar Community, including at HSG
 [Jost Hamschmidt](https://iwoe.unisg.ch/the-institute/about-us/team/detail/person-id/86050c65-05e9-4835-b095-a6d60cf75f09/),
 [Clémentine Robert](https://www.unisg.ch/en/university/about-us/organisation/detail/person-id/15a89227-d4e6-49d1-8211-8b13c29f804d/),
 [Rhea Riemke](https://ifb.unisg.ch/en/team/rhea-riemke/),
-Catherine McDonald,
+[Catherine McDonald](https://www.skema.edu/en/faculty-and-research/professors/catherine-mc-donald),
 [Adrian Preussner](https://ics.unisg.ch/the-institute/about-us/team/detail/person-id/34ab045b-3d9c-4528-8588-a34ba5c8e70c/),
-Lasse van Look and
+[Lasse van Look](https://www.linkedin.com/in/lasse-van-look/) and
 [Alina Welser](https://www.unisg.ch/en/university/about-us/organisation/detail/person-id/3159bf57-ac64-438b-baa8-8c7802477842/).
 We are also deeply grateful to
 [Wren Montgomery and Sylvia Grewatsch](https://www.impactscholarcommunity.com/team-3) for the
