@@ -12,7 +12,7 @@ future of the community. If you would like to join them, please reach out.
 
 What this looks like:
 
-- Co-organise at least one main community event per year.
+- Co-organise events.
 - Keep the community alive with regular updates on relevant developments.
 - Everything else is up to you, based on your capacity and drive. Bring your own ideas!
 
