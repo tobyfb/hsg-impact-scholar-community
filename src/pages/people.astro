@@ -76,17 +76,22 @@ const bios = new Map(rendered);
                     {community && <span class="muted">{community}</span>}
                   </p>
                   <Bio />
-                  {m.researchInterests && (
-                    <>
-                      <p class="person__label">Research interests</p>
-                      <p>{m.researchInterests}</p>
-                    </>
-                  )}
-                  {m.methods.length > 0 && (
-                    <>
-                      <p class="person__label">Methods</p>
-                      <ul class="chips chips--methods">{m.methods.map((item) => <li>{item}</li>)}</ul>
-                    </>
+                  {(m.researchInterests || m.methods.length > 0) && (
+                    <details class="person__more">
+                      <summary>{m.researchInterests ? "Research interests" : "Methods"}{m.researchInterests && m.methods.length > 0 && " and methods"}</summary>
+                      {m.researchInterests && (
+                        <>
+                          <p class="person__label">Research interests</p>
+                          <p>{m.researchInterests}</p>
+                        </>
+                      )}
+                      {m.methods.length > 0 && (
+                        <>
+                          <p class="person__label">Methods</p>
+                          <ul class="chips chips--methods">{m.methods.map((item) => <li>{item}</li>)}</ul>
+                        </>
+                      )}
+                    </details>
                   )}
                   {links.length > 0 && (
                     <p style="margin-top: 0.9rem">
