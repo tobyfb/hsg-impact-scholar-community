@@ -1,29 +1,54 @@
 ---
-title: Mini Methods Jam + Community Get-Together
+title: Mini Methods Jam and Community Get-Together
 date: 2026-11-30
 startTime: "14:00"
 endTime: "16:00"
 location: SQUARE Arena
-locationNote: University of St.Gallen
-format: Method spotlights and get-together
+locationNote: Followed by an apéro
+format: Short inputs and discussion rounds
 series: methods
-summary: Short spotlights on research methods for impact-oriented work, followed by a get-together that closes the year and opens the next phase of the community.
+summary: Short inputs on diverse, non-standard methods for sustainability and impact-oriented research, from EEG experiments to bot-proofing online research, followed by discussion rounds and an apéro.
+people:
+  - name: Dr. Marie-Luise Matthys
+    role: Speaker
+  - name: Prof. Henrik Lekkas
+    role: Speaker
+  - name: Pia Schnabel
+    role: Speaker
+  - name: Dr. Mahshid Khademi
+    role: Speaker
+  - name: Dr. Anna Brzykcy
+    role: Speaker
+  - name: Prof. Jamie Gloor
+    role: Speaker
+  - name: Prof. Tobias Ebert
+    role: Speaker
 signup:
   url: https://forms.cloud.microsoft/e/X4wTB4THR9
+flyer:
+  image: /media/events/2026-11-30-mini-methods-jam/flyer.jpg
 shareImage: /media/events/2026-11-30-mini-methods-jam/share.png
 ---
 
-We got great feedback on the Methods Jam in March and want to continue with a shorter
-edition towards the end of the semester, combined with a Community Get-Together and the
-closing of the year.
+Looking for fresh ways to do sustainability and impact-oriented research? The Mini Methods
+Jam offers insights into diverse, non-standard methods. Everyone interested in innovative
+research methods is warmly invited to join.
 
-## Present your method
+## Short inputs
 
-Are you working on an important topic with an interesting method or methodology, and would
-you be happy to present it to an engaged audience? Please [reach out](/get-involved/#contact).
+- Dr. Marie-Luise Matthys: IMAGINE focus groups
+- Prof. Henrik Lekkas and Pia Schnabel: EEG experiment
+- Dr. Mahshid Khademi: consequential behaviours
+- Dr. Anna Brzykcy: emotion recognition of leaders
+- Prof. Jamie Gloor: bot- and LLM-proofing online research
+- Prof. Tobias Ebert: unconventional data sources
+
+Connect with researchers across disciplines and career stages during the discussion rounds
+to get inspired and expand your sustainability research toolkit. The afternoon closes with
+an apéro.
 
 ## Shape the next phase of the community
 
-The community turned five this year, and it is looking for new stewards. The get-together is
-a good moment to hear what that involves and to bring your own ideas. More on the
-[get involved](/get-involved/) page.
+We are in the process of handing over the stewardship of the community to a new group of PhD
+students. The get-together is a good moment to hear what that involves and to bring your own
+ideas. More on the [get involved](/get-involved/) page.
